@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>LOGIN PAGE</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+    function validationForm() {
+  var name=document.getElementById("name");
+    var password=document.getElementById("password");
+    if(name.value=="javed" && password.value=="jav543"){
+        return true;
+    }
+    else{
+        alert("wrong password or id");
+        return false;
+    }
+}
+  </script>
+</head>
+
+<body>
+  <div class="login-box">
+    <h1>Login</h1>
+    <form action="page.html"  class="form" onsubmit="return validationForm()">
+      <div class="textbox">
+        <i class="fa fa-user" aria-hidden="true"></i>
+
+        <input type="text" placeholder="Username" name="Userid" value="" placeholder="Username" required id="name">
+
+    </div>
+
+        <div class="textbox">
+          <i class="fa fa-lock" aria-hidden="true"></i>
+
+          <input type="password" placeholder="password" name="passw" value="" placeholder="Password" required id="password">
+    </div>
+          <input class="btn" type="submit" value="Sign in" target="_blank" onClick="validationForm()">
+          <p>Username: javed&nbsp;/&nbsp;password: jav543</p>
+          
+        
+    </form>
+  </div>
+
+
+</body>
+
+</html>
